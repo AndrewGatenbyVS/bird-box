@@ -57,9 +57,9 @@ async function updateGist(tweet) {
       files: {
         [filename]: {
           filename: 'Tweety McTweetface' ,
-          content: wrap(tweet.text) + `@${twitterHandle} - ${timeAgo} ago | ❤ ${
+          content: wrap(tweet.text) + '\n' + `@${twitterHandle} - ${timeAgo} ago | ❤ ${
             tweet.favorite_count
-          } | 🔁 ${tweet.retweet_count}`
+          } | 🔁 ${tweet.retweet_count}` + '\n' + 'https://twitter.com/@${twitterHandle}'
         }
       }
     });
